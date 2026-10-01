@@ -1,0 +1,35 @@
+{
+ "first": {
+  "version": 2,
+  "slice_idx": 1,
+  "slices_retrained": 2,
+  "accept": 1,
+  "reason": "accept",
+  "seconds": 12.056566953659058,
+  "h_record": "8e836267034028c535d4e9320a850babfab6d908d8de1e87cd96714163f71fd4"
+ },
+ "record_entries": 1,
+ "second": {
+  "version": 5,
+  "slice_idx": 2,
+  "slices_retrained": 1,
+  "accept": 1,
+  "reason": "accept",
+  "seconds": 5.852966785430908,
+  "h_record": "670d7d1cfa6a509fb6497ccb60e8d7fce9c63ca8f114ec942e46e033b0f84eb9"
+ },
+ "resurrection_refused": true,
+ "record_rollback_refused": true,
+ "verifier_rejects": true,
+ "ablation_accepts": true,
+ "rollback": {
+  "version": 3,
+  "slice_idx": 2,
+  "restored": [
+   232
+  ],
+  "first_time_accepts": true,
+  "stateful_rejects": true,
+  "ablation_accepts": true
+ }
+}

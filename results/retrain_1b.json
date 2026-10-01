@@ -1,0 +1,53 @@
+{
+ "config": {
+  "batch_size": 2,
+  "c_base_hex": "cc0e7a110d13f66df4a4e04a73bbe1cc3bf18255fcbed1e94257f793c9e74540",
+  "epochs": 1,
+  "lora_alpha": 16,
+  "lora_rank": 4,
+  "lr": 0.0001,
+  "model_id": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "seq_len": 256,
+  "target_modules": [
+   "q_proj",
+   "v_proj"
+  ]
+ },
+ "rows": [
+  {
+   "slice": 0,
+   "retrained": 4,
+   "median": 2.7118749618530273,
+   "min": 2.700258493423462,
+   "max": 2.7207765579223633,
+   "n": 6
+  },
+  {
+   "slice": 1,
+   "retrained": 3,
+   "median": 2.031912684440613,
+   "min": 2.0205962657928467,
+   "max": 2.037832260131836,
+   "n": 6
+  },
+  {
+   "slice": 2,
+   "retrained": 2,
+   "median": 1.3462004661560059,
+   "min": 1.343052864074707,
+   "max": 1.3495378494262695,
+   "n": 6
+  },
+  {
+   "slice": 3,
+   "retrained": 1,
+   "median": 0.6605333089828491,
+   "min": 0.6576328277587891,
+   "max": 0.6631834506988525,
+   "n": 6
+  }
+ ],
+ "slope_s_per_slice": 0.6839737176895143,
+ "intercept_s": -0.02230393886566167,
+ "max_residual_s": 0.0022954702377315783
+}

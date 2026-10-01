@@ -1,0 +1,22 @@
+{
+ "in_sgx": true,
+ "measurement": {
+  "mr_enclave": "deaf04e35f6e22d441d769555bd2dc401ccded7f8c403c1a8a4ac46cb5e33cf1",
+  "mr_signer": "00ebd01375e226aade9623b4da4268d6432804821e24774d30187f09d4f84734",
+  "report_bytes": 432
+ },
+ "measurement_error": null,
+ "sealing": {
+  "bytes": 382,
+  "seal_s": 0.0001606583595275879,
+  "unseal_s": 9.865522384643555e-05,
+  "inherited_previous": true,
+  "inherit_error": null
+ },
+ "quote": null,
+ "quote_error": "no /dev/attestation/quote",
+ "deps": {
+  "numpy": "1.21.5",
+  "cryptography": "3.4.8"
+ }
+}

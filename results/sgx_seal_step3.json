@@ -1,0 +1,19 @@
+{
+ "in_sgx": true,
+ "measurement": {
+  "mr_enclave": "d66ff4a86727bedc495de381493e074e4fcb74facba2e626bac772496b037ca4",
+  "mr_signer": "00ebd01375e226aade9623b4da4268d6432804821e24774d30187f09d4f84734",
+  "report_bytes": 432
+ },
+ "measurement_error": null,
+ "sealing": {
+  "inherited_previous": false,
+  "inherit_error": "PermissionError: [Errno 13] Permission denied: '/sealed/state.json'"
+ },
+ "quote": null,
+ "quote_error": "no /dev/attestation/quote",
+ "deps": {
+  "numpy": "1.21.5",
+  "cryptography": "3.4.8"
+ }
+}

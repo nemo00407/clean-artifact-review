@@ -1,0 +1,17 @@
+{
+ "step1": {
+  "MRENCLAVE": "f6c738e3dd59759a29f153818c056d5e15bab3b395272c69682bcfc0615ff080",
+  "REPORTED": "f6c738e3dd59759a29f153818c056d5e15bab3b395272c69682bcfc0615ff080",
+  "SEALED_READ": "ok",
+  "PK": "4e6723d3ac7b9132fe6f46d744c08807a7bbbc2e871c6c565dbe05bc81a5a300"
+ },
+ "step2": {
+  "MRENCLAVE": "f2b7c391f744219e47569f3ae5ee2e979d6a44b2388c16f90ec42dcfa35513e5",
+  "REPORTED": "f2b7c391f744219e47569f3ae5ee2e979d6a44b2388c16f90ec42dcfa35513e5",
+  "SEALED_READ": "refused: PermissionError [Errno 13] Permission denied: '/sealed/enclave.sealed'"
+ },
+ "measurement_changed": true,
+ "reported_matches_sigstruct": true,
+ "step1_opened_sealed": true,
+ "step2_opened_sealed": false
+}

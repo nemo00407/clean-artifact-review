@@ -1,0 +1,77 @@
+# Gramine manifest for the CLEAN control plane and the evaluation that drives it.
+#
+# The split of the mounts below is the paper's trust boundary, made mechanical:
+#
+#   /clean    the runtime, the verifier and the harness, measured. Changing one
+#             byte of any of them changes MRENCLAVE, which changes the key the
+#             sealed state is derived under and invalidates every certificate
+#             that named the old measurement.
+#   /data     the host's storage. Untrusted by construction, so it is *not*
+#             measured: the commitments the gateway retains are what make a
+#             fetch from here believable, not the platform.
+#   /results  where the evaluation writes what it measured. Also unmeasured;
+#             an auditor believes the certificates, not this directory.
+#   /sealed   an encrypted mount keyed by `_sgx_mrenclave`, i.e. by EGETKEY
+#             under this image's measurement. The signing seed and the
+#             per-shard record heads live here, which is what makes the sealed
+#             state of Assumption 2 a hardware property.
+#
+# The red team runs on the host, outside all of this. It can rewrite /data
+# freely; it cannot enter /clean or read /sealed.
+
+libos.entrypoint = "{{ entrypoint }}"
+loader.entrypoint.uri = "file:{{ gramine.libos }}"
+loader.log_level = "{{ log_level }}"
+
+loader.env.LD_LIBRARY_PATH = "/lib:{{ arch_libdir }}:/usr/lib:/usr{{ arch_libdir }}"
+loader.env.PYTHONHOME = "/usr"
+loader.env.PYTHONPATH = "/clean:/usr/lib/python3/dist-packages"
+loader.env.PYTHONDONTWRITEBYTECODE = "1"
+loader.env.CLEAN_DATA_DIR = "/data"
+# A temporary copy of a deployment's data is host storage like the rest of it, so
+# it belongs on the unmeasured mount and not in the enclave's own /tmp.
+loader.env.TMPDIR = "/data/tmp"
+# The deterministic contract: one thread, so no reduction order depends on how
+# many cores happened to be free.
+loader.env.OMP_NUM_THREADS = "1"
+loader.env.OPENBLAS_NUM_THREADS = "1"
+loader.env.MKL_NUM_THREADS = "1"
+loader.insecure__use_cmdline_argv = true
+
+fs.start_dir = "/clean"
+
+fs.mounts = [
+  { path = "/lib",              uri = "file:{{ gramine.runtimedir() }}" },
+  { path = "{{ arch_libdir }}", uri = "file:{{ arch_libdir }}" },
+  { path = "/usr",              uri = "file:/usr" },
+  { path = "/etc",              uri = "file:/etc" },
+  { path = "/clean",            uri = "file:/clean" },
+  { path = "/data",             uri = "file:/data" },
+  { path = "/results",          uri = "file:/results" },
+  { path = "/tmp",              uri = "file:/tmp" },
+  { path = "/sealed", uri = "file:/sealed", type = "encrypted", key_name = "_sgx_mrenclave" },
+]
+
+sgx.debug = true
+sgx.edmm_enable = false          # this CPU reports SGX2 false
+sgx.enclave_size = "{{ enclave_size }}"
+sgx.max_threads = 16
+sgx.remote_attestation = "{{ ra_type }}"
+
+sgx.trusted_files = [
+  "file:{{ gramine.libos }}",
+  "file:{{ gramine.runtimedir() }}/",
+  "file:{{ arch_libdir }}/",
+  "file:/usr/{{ arch_libdir }}/",
+  "file:/usr/bin/python3.10",
+  "file:/usr/lib/python3.10/",
+  "file:/usr/lib/python3/dist-packages/",
+  "file:/clean/",
+]
+
+sgx.allowed_files = [
+  "file:/data/",
+  "file:/results/",
+  "file:/sealed/",
+  "file:/etc/",
+]

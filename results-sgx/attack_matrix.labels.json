@@ -1,0 +1,39 @@
+{
+ "attacks": [
+  "Retraining Skipping",
+  "Certificate Replay",
+  "Deletion-Set Substitution",
+  "Checkpoint Substitution",
+  "Unclean Checkpoint",
+  "Deletion Resurrection",
+  "Dataset Tampering",
+  "Randomness Manipulation",
+  "Configuration Steering",
+  "Mid-Invocation Rollback",
+  "Transfer Tampering"
+ ],
+ "columns": [
+  "full",
+  "-NoNonce",
+  "-NoDataBind",
+  "-NoDeltaBind",
+  "-NoDataBind -NoDeltaBind -NoRecord",
+  "-NoCPCert",
+  "-NoClean",
+  "-NoConfigBind",
+  "-NoRecord",
+  "-NoReverify"
+ ],
+ "short": [
+  "full",
+  "Nonce",
+  "Data",
+  "Delta",
+  "Request",
+  "CPCert",
+  "Clean",
+  "Config",
+  "Record",
+  "Reverify"
+ ]
+}

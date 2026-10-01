@@ -1,0 +1,12 @@
+{
+ "configs": 56,
+ "equal": 56,
+ "verified": 56,
+ "determinism_repeats": 20,
+ "distinct_adapters": 1,
+ "distinct_signatures": 1,
+ "controls": {
+  "CLEAN-NoExclusion": true,
+  "CLEAN-NoCleanCP": true
+ }
+}

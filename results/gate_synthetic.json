@@ -1,0 +1,14 @@
+{
+ "torch": "2.6.0+cu124",
+ "cuda": "12.4",
+ "device": "NVIDIA GeForce RTX 3080 Ti",
+ "cublas_workspace": ":4096:8",
+ "steps": 20,
+ "run1": "37cfa614e5929ac06eccd8cf8e33f3d9ee43ac5068818ee43845ee914a7cadf5",
+ "run2": "37cfa614e5929ac06eccd8cf8e33f3d9ee43ac5068818ee43845ee914a7cadf5",
+ "different_seed": "9afec58fc458a4528711f89c487c4252787ed66e99769c6a9f051abbae39f9b1",
+ "identical": true,
+ "criterion_discriminates": true,
+ "final_loss": 511.7521057128906,
+ "loss_identical": true
+}

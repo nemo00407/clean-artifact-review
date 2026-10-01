@@ -1,0 +1,12 @@
+i caught label
+0 1 forbidden_import
+1 1 forbidden_from-import
+2 1 ambient_builtin:_eval
+3 1 ambient_builtin:_getattr
+4 1 file_open_outside_the_gateway
+5 1 array-library_filesystem_API
+6 1 array-library_FS_via_from-import
+7 1 untrusted_backend_outside_the_read_path
+8 1 storage_path_outside_the_boundary
+9 0 attribute-chain_escape
+10 0 alias_rebinding_of_the_array_library

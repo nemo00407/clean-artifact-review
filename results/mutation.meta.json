@@ -1,0 +1,10 @@
+{
+ "total": 11,
+ "caught": 9,
+ "missed": 2,
+ "clean_runtime_violations": 0,
+ "missed_classes": [
+  "attribute-chain escape",
+  "alias rebinding of the array library"
+ ]
+}

@@ -1,0 +1,14 @@
+# The runtime, the verifier and the CPU harness need only these two.
+# Pinned to the versions the measurements in results/ were taken with.
+numpy==2.5.2
+cryptography==50.0.0
+pytest==9.1.1
+
+# Only the 1.1B-parameter experiments (harness/sisa_train_1b.py,
+# harness/two_world_1b.py, harness/retrain_cost_1b.py, harness/gpu_kernel.py,
+# harness/determinism_gate_llm.py) need these. Everything else runs without them.
+# torch must match the local CUDA; 2.6.0+cu124 is what was used here.
+torch==2.6.0
+transformers==5.17.0
+peft==0.21.0
+accelerate==1.15.0

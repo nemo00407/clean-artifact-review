@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated deployments and enclave build outputs. Everything here is
+# reproduced by the commands in README.md; none of it is checked in.
+data/
+data-1b/
+data-sgx/
+sgx/stage/
+sgx/build/
+sgx/sealed/
+sgx/enclave-key.pem

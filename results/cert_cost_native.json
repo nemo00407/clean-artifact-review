@@ -1,0 +1,13 @@
+{
+ "label": "native",
+ "mrenclave": "a7e4730b3f3f004bda733a5a7e1ea52dd627e8bf22f0ae188bc3ea4f81ce753a",
+ "adapter_bytes": 16480,
+ "base_bytes": 1351972,
+ "adapter_hash_us": 44.16797310113907,
+ "full_model_hash_us": 2537.505002692342,
+ "arc_sign_us": 34.227967262268066,
+ "cp_cert_sign_us": 34.06312316656113,
+ "derive_r_us": 0.9350478649139404,
+ "record_extend_us": 8.716946467757225,
+ "certificate_us": 87.11288683116436
+}

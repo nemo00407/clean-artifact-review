@@ -1,0 +1,16 @@
+{
+ "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+ "torch": "2.6.0+cu124",
+ "device": "NVIDIA GeForce RTX 3080 Ti",
+ "steps": 5,
+ "trainable_params": 563200,
+ "total_params": 1100611584,
+ "run1": "fa6b020ba5a28db3df55d66feaf4020f765df1ed5319499beb4ac1c296ff66aa",
+ "run2": "fa6b020ba5a28db3df55d66feaf4020f765df1ed5319499beb4ac1c296ff66aa",
+ "different_seed": "196fbc81a3628dcea04a8ef2289b20121d96e4173691b0c8782b81290210f932",
+ "identical": true,
+ "criterion_discriminates": true,
+ "final_loss": 12.432592391967773,
+ "loss_identical": true,
+ "peak_vram_gb": 6.505756672
+}

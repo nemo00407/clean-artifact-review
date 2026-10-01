@@ -1,0 +1,206 @@
+{
+ "config": {
+  "batch_size": 2,
+  "c_base_hex": "cc0e7a110d13f66df4a4e04a73bbe1cc3bf18255fcbed1e94257f793c9e74540",
+  "epochs": 1,
+  "lora_alpha": 16,
+  "lora_rank": 4,
+  "lr": 0.0001,
+  "model_id": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "seq_len": 256,
+  "target_modules": [
+   "q_proj",
+   "v_proj"
+  ]
+ },
+ "rows": [
+  {
+   "label": "s0 slice1 n1",
+   "shard": 0,
+   "slice": 1,
+   "n": 1,
+   "deleted": [
+    13
+   ],
+   "equal": true,
+   "accept": 1,
+   "reason": "accept",
+   "h_a": "641f616c601695c6f59dcd6664496e10bc0804d48c1b3728387c0812ef8716da",
+   "h_b": "641f616c601695c6f59dcd6664496e10bc0804d48c1b3728387c0812ef8716da",
+   "seconds": 14.016759395599365
+  },
+  {
+   "label": "s0 slice1 n2",
+   "shard": 0,
+   "slice": 1,
+   "n": 2,
+   "deleted": [
+    13,
+    15
+   ],
+   "equal": true,
+   "accept": 1,
+   "reason": "accept",
+   "h_a": "40ea127514e29ff132c2fcbeefd2433658370f7e2d85b5e2b5d07e97620f4766",
+   "h_b": "40ea127514e29ff132c2fcbeefd2433658370f7e2d85b5e2b5d07e97620f4766",
+   "seconds": 3.817399024963379
+  },
+  {
+   "label": "s0 slice2 n1",
+   "shard": 0,
+   "slice": 2,
+   "n": 1,
+   "deleted": [
+    25
+   ],
+   "equal": true,
+   "accept": 1,
+   "reason": "accept",
+   "h_a": "2688b07739d9a49586fd7822b463043df45f9d8b376724247c45b452d7824ad6",
+   "h_b": "2688b07739d9a49586fd7822b463043df45f9d8b376724247c45b452d7824ad6",
+   "seconds": 2.709057092666626
+  },
+  {
+   "label": "s0 slice2 n2",
+   "shard": 0,
+   "slice": 2,
+   "n": 2,
+   "deleted": [
+    25,
+    27
+   ],
+   "equal": true,
+   "accept": 1,
+   "reason": "accept",
+   "h_a": "93695ca4290c58917447811b7feee0cbd56edc5b3a8b40e092d898bccf8313ab",
+   "h_b": "93695ca4290c58917447811b7feee0cbd56edc5b3a8b40e092d898bccf8313ab",
+   "seconds": 2.462987184524536
+  },
+  {
+   "label": "s0 slice3 n1",
+   "shard": 0,
+   "slice": 3,
+   "n": 1,
+   "deleted": [
+    39
+   ],
+   "equal": true,
+   "accept": 1,
+   "reason": "accept",
+   "h_a": "e5ef79cd5e1ba719c65a2ebc1348e10515dd9ee061a96625078bd8154a34d17c",
+   "h_b": "e5ef79cd5e1ba719c65a2ebc1348e10515dd9ee061a96625078bd8154a34d17c",
+   "seconds": 1.3422136306762695
+  },
+  {
+   "label": "s0 slice3 n2",
+   "shard": 0,
+   "slice": 3,
+   "n": 2,
+   "deleted": [
+    39,
+    40
+   ],
+   "equal": true,
+   "accept": 1,
+   "reason": "accept",
+   "h_a": "65f6323ea133bb5142675536320222c1ce6542022dd684051271540b12860252",
+   "h_b": "65f6323ea133bb5142675536320222c1ce6542022dd684051271540b12860252",
+   "seconds": 1.1008186340332031
+  },
+  {
+   "label": "s1 slice1 n1",
+   "shard": 1,
+   "slice": 1,
+   "n": 1,
+   "deleted": [
+    22
+   ],
+   "equal": true,
+   "accept": 1,
+   "reason": "accept",
+   "h_a": "d7347b94e448b89ee83bef152bdcc82f8e6a4774d3a4922d555cecc5affabde9",
+   "h_b": "d7347b94e448b89ee83bef152bdcc82f8e6a4774d3a4922d555cecc5affabde9",
+   "seconds": 4.069474220275879
+  },
+  {
+   "label": "s1 slice1 n2",
+   "shard": 1,
+   "slice": 1,
+   "n": 2,
+   "deleted": [
+    22,
+    26
+   ],
+   "equal": true,
+   "accept": 1,
+   "reason": "accept",
+   "h_a": "59e077efaaef043730dfdf274d51d269cba07e8e0baf9761209b8e9b33e88cb0",
+   "h_b": "59e077efaaef043730dfdf274d51d269cba07e8e0baf9761209b8e9b33e88cb0",
+   "seconds": 3.8346621990203857
+  },
+  {
+   "label": "s1 slice2 n1",
+   "shard": 1,
+   "slice": 2,
+   "n": 1,
+   "deleted": [
+    42
+   ],
+   "equal": true,
+   "accept": 1,
+   "reason": "accept",
+   "h_a": "82599506a1754aab6ed59a60df207956a2d212760bf8e7f71cfed79bfc1b4f7b",
+   "h_b": "82599506a1754aab6ed59a60df207956a2d212760bf8e7f71cfed79bfc1b4f7b",
+   "seconds": 2.7251875400543213
+  },
+  {
+   "label": "s1 slice2 n2",
+   "shard": 1,
+   "slice": 2,
+   "n": 2,
+   "deleted": [
+    42,
+    45
+   ],
+   "equal": true,
+   "accept": 1,
+   "reason": "accept",
+   "h_a": "de2f02cfe0801c22b15ed3f6d148c8cce1f1e12ccbad175226e035516da0e899",
+   "h_b": "de2f02cfe0801c22b15ed3f6d148c8cce1f1e12ccbad175226e035516da0e899",
+   "seconds": 2.469930648803711
+  },
+  {
+   "label": "s1 slice3 n1",
+   "shard": 1,
+   "slice": 3,
+   "n": 1,
+   "deleted": [
+    56
+   ],
+   "equal": true,
+   "accept": 1,
+   "reason": "accept",
+   "h_a": "b7571b36bb6190f4f4e78dcdfe012dd167d4dd9ad04e8cfb55265b89eae31291",
+   "h_b": "b7571b36bb6190f4f4e78dcdfe012dd167d4dd9ad04e8cfb55265b89eae31291",
+   "seconds": 1.3480021953582764
+  },
+  {
+   "label": "s1 slice3 n2",
+   "shard": 1,
+   "slice": 3,
+   "n": 2,
+   "deleted": [
+    56,
+    57
+   ],
+   "equal": true,
+   "accept": 1,
+   "reason": "accept",
+   "h_a": "c5ec0b4fbc03433710e52bc76c4c6e928592f4dc50154958906eef288713cc1b",
+   "h_b": "c5ec0b4fbc03433710e52bc76c4c6e928592f4dc50154958906eef288713cc1b",
+   "seconds": 1.10414457321167
+  }
+ ],
+ "equal": 12,
+ "accepted": 12
+}
